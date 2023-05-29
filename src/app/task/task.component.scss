@@ -21,6 +21,8 @@
     .table{
         width: 100%;
         border-collapse: collapse;
+        margin-right: 10px;
+        margin-left: 10px;
     }
     .table th,
 .table td {
@@ -29,4 +31,8 @@
 }
 .table-responsive {
     overflow-x: auto;
+  }
+  .table img{
+    max-width: 100px;
+    height: auto;
   }
