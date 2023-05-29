@@ -1,0 +1,45 @@
+<h1>Add</h1>
+<mat-dialog-content>
+<div class="container">
+    <div class="main">
+        <form (ngSubmit)="submitForm()" #form="ngForm">
+            <div>
+                <input type="text" placeholder="id"   [(ngModel)]="formData.id" name="id">
+            </div>
+            <div>
+                <input type="text" placeholder="Title"   [(ngModel)]="formData.title" name="title">
+            </div>
+            <div>
+                <input type="text" placeholder="Price" [(ngModel)]="formData.price" name="price">
+            </div>
+            <div>
+                <input type="text" placeholder="Description" [(ngModel)]="formData.description" name="description">
+            </div>
+            <div>
+                <input type="text" placeholder="Category" [(ngModel)]="formData.category" name="category">
+            </div>
+            <div>
+                <input type="text" placeholder="Image" [(ngModel)]="formData.image" name="image">
+            </div>
+            <div>
+                <input type="text" placeholder="Rate" [(ngModel)]="formData.rating.rate" name="rate">
+            </div>
+            <div>
+                <input type="text" placeholder="Count" [(ngModel)]="formData.rating.count" name="count">
+            </div>
+           
+
+            
+            
+
+        </form>
+
+
+    </div>
+
+</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="dialogRef.close()">Cancel</button>
+    <button mat-button color="primary" [disabled]="!form.valid" (click)="submitForm()">Save</button>
+  </mat-dialog-actions>

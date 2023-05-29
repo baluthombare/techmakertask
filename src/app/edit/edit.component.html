@@ -1,0 +1,46 @@
+<p>edit works!</p>
+<h1> Update</h1>
+<mat-dialog-content>
+<div class="container">
+    <div class="main">
+        <form (ngSubmit)="submitForm()" #form="ngForm">
+            <div>
+                <input type="text" placeholder="id"   [(ngModel)]="item.id" name="id">
+            </div>
+            <div>
+                <input type="text" placeholder="Title"   [(ngModel)]="item.title" name="title">
+            </div>
+            <div>
+                <input type="text" placeholder="Price" [(ngModel)]="item.price" name="price">
+            </div>
+            <div>
+                <input type="text" placeholder="Description" [(ngModel)]="item.description" name="description">
+            </div>
+            <div>
+                <input type="text" placeholder="Category" [(ngModel)]="item.category" name="category">
+            </div>
+            <div>
+                <input type="text" placeholder="Image" [(ngModel)]="item.image" name="image">
+            </div>
+            <div>
+                <input type="text" placeholder="Rate" [(ngModel)]="item.rating.rate" name="rate">
+            </div>
+            <div>
+                <input type="text" placeholder="Count" [(ngModel)]="item.rating.count" name="count">
+            </div>
+           
+
+            
+            
+
+        </form>
+
+
+    </div>
+
+</div>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="dialogRef.close()">Cancel</button>
+    <button mat-button color="primary" [disabled]="!form.valid" (click)="submitForm()">Save</button>
+  </mat-dialog-actions>
